@@ -29,7 +29,7 @@ func main() {
 	})
 	router.POST("/upload", uploadController)
 
-	router.Run(":8080")
+	router.Run(":27149")
 
 }
 func uploadController(context *gin.Context) {
