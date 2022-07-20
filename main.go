@@ -15,7 +15,7 @@ func main() {
 	router.GET("/", func(context *gin.Context) {
 		context.HTML(http.StatusOK, "upload.html", nil)
 	})
-	router.POST("/", uploadController)
+	router.POST("/upload", uploadController)
 	router.Run(":27149")
 
 	/*
@@ -58,9 +58,9 @@ func uploadController(context *gin.Context) {
 
 }
 
-func indexController(context *gin.Context) {
-	context.HTML(http.StatusOK, "index.html", gin.H{"Title": "my index"})
-}
-func aboutController(context *gin.Context) {
-	context.HTML(http.StatusOK, "about.html", gin.H{"Title": "my about"})
-}
+//func indexController(context *gin.Context) {
+//	context.HTML(http.StatusOK, "index.html", gin.H{"Title": "my index"})
+//}
+//func aboutController(context *gin.Context) {
+//	context.HTML(http.StatusOK, "about.html", gin.H{"Title": "my about"})
+//}
