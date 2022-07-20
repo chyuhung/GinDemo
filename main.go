@@ -12,10 +12,10 @@ func main() {
 	//导入模板
 	router.LoadHTMLGlob("template/*")
 	//文件上传测试
-	router.GET("/upload", func(context *gin.Context) {
+	router.GET("/", func(context *gin.Context) {
 		context.HTML(http.StatusOK, "upload.html", nil)
 	})
-	router.POST("/upload", uploadController)
+	router.POST("/", uploadController)
 	router.Run(":27149")
 
 	/*
