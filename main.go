@@ -54,6 +54,7 @@ func uploadController(context *gin.Context) {
 	} else {
 		context.SaveUploadedFile(f, "upload/"+f.Filename)
 		context.JSON(http.StatusOK, gin.H{"msg": "upload successes"})
+		//context.Redirect(http.StatusOK, "/upload")
 	}
 
 }
