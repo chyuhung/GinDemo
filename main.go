@@ -16,7 +16,7 @@ func main() {
 		context.HTML(http.StatusOK, "upload.html", nil)
 	})
 	router.POST("/upload", uploadController)
-	router.Run(":27149")
+	router.Run("127.0.0.1:27149")
 
 	/*
 		==============================================================DEMO内容
