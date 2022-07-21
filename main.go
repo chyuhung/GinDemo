@@ -52,7 +52,7 @@ func uploadController(context *gin.Context) {
 	if err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"msg": err.Error()})
 	} else {
-		context.SaveUploadedFile(f, "./upload/"+f.Filename)
+		context.SaveUploadedFile(f, "upload/"+f.Filename)
 		context.JSON(http.StatusOK, gin.H{"msg": "upload successes"})
 	}
 
